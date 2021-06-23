@@ -8,7 +8,7 @@
 
 ```cpp
 c ++: basic code
-#include <boost / spirit / include / qi.hpp> // Use boost :: spirit :: qi
+#include <boost/spirit/include/qi.hpp> // Use boost :: spirit :: qi
 #include <iostream>
 #include <string>
 
