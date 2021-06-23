@@ -1,25 +1,23 @@
-# boolパーサ
-  boolパーサが用意されています。(namespace qi = boost::spirit::qi)  
-  組込型として用意されているので、bool型はこちらを使用しましょう。  
+# bool parser
+   A bool parser is available. (namespace qi = boost :: spirit :: qi)
+   Since it is prepared as a built-in type, let's use this for the bool type.
 
-| 型(属性) | ルール |
+| Type (attribute) | Rule |
 |:--|:--|
-| bool | qi::bool_ | 
+| bool | qi :: bool_ |
 
-```
-c++:qi::bool_ 例
-#include <boost/spirit/include/qi.hpp>
+```cpp
+c ++: qi :: bool_ example
+#include <boost / spirit / include / qi.hpp>
 #include <iostream>
 
-namespace qi = boost::spirit::qi;
+namespace qi = boost :: spirit :: qi;
 
-int main() {
-  std::string input = "true false";
-  bool a, b;
-  qi::parse( input.begin(), input.end(), qi::bool_ >> ' ' >> qi::bool_, a, b );
-  std::cout << a << "," << b << std::endl;
-  return 0;
+int main () {
+   std :: string input = "true false";
+   bool a, b;
+   qi :: parse (input.begin (), input.end (), qi :: bool_ >>''>> qi :: bool_, a, b);
+   std :: cout << a << "," << b << std :: endl;
+   return 0;
 }
 ```
-
-
