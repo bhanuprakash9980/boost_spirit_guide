@@ -7,7 +7,7 @@
 | bool | qi :: bool_ |
 
 ```cpp
-c ++: qi :: bool_ example
+//c ++: qi :: bool_ example
 #include <boost / spirit / include / qi.hpp>
 #include <iostream>
 
