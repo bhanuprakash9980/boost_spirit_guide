@@ -1,33 +1,33 @@
-# Boost::Spiritで構文解析
-## Boost::Spiritとは
-  C++で構文解析を書くためのライブラリです。yacc, lex といったものを使用せず、C++だけで構文解析を行う事ができます。
-JSONパーサ、電卓、コンフィグの読み込み、オレオレ・スクリプト、プロトコル・パーサなど、幅広く活用できます。
+Parsing with # Boost :: Spirit
+## What is Boost :: Spirit?
+  A library for writing parsing in C ++. You can parse only in C ++ without using yacc, lex, etc.
+It can be widely used for JSON parser, calculator, config loading, oleore script, protocol parser, etc.
 
-## このガイドを書いた目的
-  このライブラリは、とても面白いのでワクワク感があります。この面白さを伝えたい。と同時に、デリケートな側面もあり、ちょっとした事で心が折れそうになるコンパイルエラーに遭遇したり、挙動に悩まれたりする事があります。Spiritが発表されて、時間がたちました。巷にある情報は古いバージョンのものが多く、情報ソースとしては役に立たないものが増えてきたように思います。日本語の文字列処理を取り扱う情報も少ないので、本ライブラリを本格的に採用するには敷居が高いです。こういったガイドを書ける立場にある人も、自分が思っている以上に少ないのかもしれません。これを書くことによって、世の中にもっと面白いものが出てくる事を願って書きました。
+## Purpose of writing this guide
+  This library is very interesting and exciting. I want to convey this fun. At the same time, it also has a delicate aspect, and you may encounter compilation errors that can be daunting, or you may be annoyed by the behavior. Time has passed since the Spirit was announced. Most of the information in the streets is old versions, and I think that more and more information sources are useless. Since there is little information dealing with Japanese character string processing, there is a high threshold for full-scale adoption of this library. There may be fewer people in a position to write such a guide than I think. I wrote this in the hope that more interesting things will come out in the world by writing this.
 
-## 本ガイドの進め方
-　小さなサンプルを元に理解を深めて行きます。動くコードをかけるようになって、なんぼのものというスタイルです。Spiritの構成として、Qi,Pheonix,Karma,Lex とありますが、Qi と Pheonix のみ扱います。
+## How to proceed with this guide
+We will deepen our understanding based on a small sample. I started to play working code, and it's a style of something. There are Qi, Pheonix, Karma, Lex as the composition of Spirit, but only Qi and Pheonix are handled.
 
-## パーサ
+## Parser
 
- * [基本](parser_basic.md)
- * [数値パーサ](parser_numeric.md)
- * [文字パーサ](parser_char.md)
- * [boolパーサ](parser_bool.md)
- * [symbolsパーサ](symbols.md)
- * [パーサ・オペレータ](parser_operators.md)
- * [補助パーサ](parser_auxiliary.md)
- * [パーサ・ディレクティブ](parser_directive.md)
- * [セマンティック・アクション(+フェニックス)](semantic_action.md)
+ * [Basic] (parser_basic.md)
+ * [Numeric parser] (parser_numeric.md)
+ * [Character parser] (parser_char.md)
+ * [bool parser] (parser_bool.md)
+ * [symbols parser] (symbols.md)
+ * [Parser Operators] (parser_operators.md)
+ * [Auxiliary parser] (parser_auxiliary.md)
+ * [Parser Directive] (parser_directive.md)
+ * [Semantic Action (+ Phoenix)] (semantic_action.md)
  
-## ルール
+## Rules
 
- * [ルールを書く](rule.md)
- * [Nバイト文字の処理](rule_nbytechars.md)
- * [コメント構文(Skipper)](skipper.md)
- * [構造体を読む(Fusion)](fusion.md)
- * [std::pairを利用する(Fusion)](fusion2.md)
- * [エラー箇所の表示(PositionIterator)](position_iterator.md)
- * [数値パーサ2](parser_numeric2.md)
- * [フェニックスとプレースホルダ](phoenix2.md)
+ * [Write a rule] (rule.md)
+ * [Processing Nbyte characters] (rule_nbytechars.md)
+ * [Comment syntax (Skipper)] (skipper.md)
+ * [Read Structure (Fusion)] (fusion.md)
+ * [Use std :: pair (Fusion)] (fusion2.md)
+ * [Display error location (Position Iterator)] (position_iterator.md)
+ * [Numeric parser 2] (parser_numeric2.md)
+ * [Phoenix and Placeholder] (phoenix2.md)
