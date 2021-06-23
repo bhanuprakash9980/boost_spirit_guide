@@ -7,7 +7,7 @@
   Inputs that do not match the rule will fail parsing (qi :: parse returns false).
 
 ```cpp
-c ++: basic code
+//c ++: basic code
 #include <boost/spirit/include/qi.hpp> // Use boost :: spirit :: qi
 #include <iostream>
 #include <string>
