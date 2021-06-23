@@ -1,4 +1,4 @@
-#Parser basic
+# Parser basic
 
   The rule consists of Iterator (input), Skipper (rule that skips input such as comments), and the type (attribute) of the parsed value.
   I will not touch on the explanation of Skipper in the basics, but will deal with it after I start to build rules.
@@ -6,7 +6,7 @@
   First, let's take a look at the basic rules for retrieving a value from a string input. To check the basic rules, use the code below.
   Inputs that do not match the rule will fail parsing (qi :: parse returns false).
 
-`` ```
+```cpp
 c ++: basic code
 #include <boost / spirit / include / qi.hpp> // Use boost :: spirit :: qi
 #include <iostream>
@@ -25,5 +25,5 @@ int main () {
   std :: cout << n << std :: endl; // Check the parsed result.
   return 0;
 }
-`` ```
+```
 The rule to parse is equivalent to qi :: int_ and the input string is "12345".
