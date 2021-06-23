@@ -14,7 +14,7 @@ struct symbols;
   However, T must meet the requirements of Primitive Type.
 
 ```cpp
-C ++: char enum
+//C ++: char enum
 #include <boost / spirit / include / qi.hpp>
 #include <iostream>
 #include <string>
