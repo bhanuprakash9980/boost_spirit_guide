@@ -1,31 +1,29 @@
-# パーサ基本
+#Parser basic
 
-  ルールは Iterator(入力) と Skipper(コメントなどの入力をスキップするルール) と 解析された値の型(属性) から構成されます。  
-  Skipper の説明には基本では触れず、ルールを構築するようになってから取扱います。  
+  The rule consists of Iterator (input), Skipper (rule that skips input such as comments), and the type (attribute) of the parsed value.
+  I will not touch on the explanation of Skipper in the basics, but will deal with it after I start to build rules.
 
-  まずは、文字列の入力から値を取り出すための基本ルールを見て行きましょう。基本ルールの確認は、下記のようなコードで行います。  
-  ルールにマッチしない入力は、解析に失敗します(qi::parse が false を返す)。  
+  First, let's take a look at the basic rules for retrieving a value from a string input. To check the basic rules, use the code below.
+  Inputs that do not match the rule will fail parsing (qi :: parse returns false).
 
-```
-c++:基本のコード
-#include <boost/spirit/include/qi.hpp>  // boost::spirit::qi を利用します
+`` ```
+c ++: basic code
+#include <boost / spirit / include / qi.hpp> // Use boost :: spirit :: qi
 #include <iostream>
 #include <string>
 
-namespace qi = boost::spirit::qi;  // namespaceが長いので qi にします
+namespace qi = boost :: spirit :: qi; // Since the namespace is long, set it to qi
 
-int main() {
-  std::string input = "12345"; // 解析させる入力です。値を書き換えて遊んでください
-  int n;  // 解析された結果を格納するための変数です。この部分は記述するルールに応じて変わります。
-  qi::parse( // 解析をする関数本体です
-    input.begin(), input.end(), // 解析させる入力の指定 
-    qi::int_, // 解析するルール
-    n // 解析された結果を格納するための変数
-  ); 
-  std::cout << n << std::endl; // 解析された結果を確認します。
+int main () {
+  std :: string input = "12345"; // Input to parse. Please rewrite the value and play
+  int n; // Variable to store the parsed result. This part depends on the rules you write.
+  qi :: parse (// The body of the function to parse
+    input.begin (), input.end (), // Specify the input to be parsed
+    qi :: int_, // rules to parse
+    n // Variable to store the parsed result
+  );
+  std :: cout << n << std :: endl; // Check the parsed result.
   return 0;
 }
-```
-解析するルールが qi::int_ に相当し、入力文字列は "12345" です。
-
-
+`` ```
+The rule to parse is equivalent to qi :: int_ and the input string is "12345".
