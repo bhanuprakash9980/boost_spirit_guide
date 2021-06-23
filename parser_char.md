@@ -11,7 +11,7 @@
  * qi :: standard_wide
  
   The design of this area is fluid, so there is no problem if you keep the two, standard and standard_wide.
-  ascii and [iso8859_1] (https://ja.wikipedia.org/wiki/ISO/IEC_8859-1) are included in standard.
+  ascii and [iso8859_1] (https://en.wikipedia.org/wiki/ISO/IEC_8859-1) are included in standard.
   The namespaces shift_jis and euc_jp do not exist, but they are included in standard.
   utf-8 is included in standard. However, if utf-8 is processed by wchar_t via iostream codecvt, it is included in standard_wide.
  
